@@ -1,0 +1,27 @@
+#!/bin/bash
+
+###########################################################
+#            Install a Brew Cask and Formats Nicely
+###########################################################
+arg=$1
+capitalized="$(tr '[:lower:]' '[:upper:]' <<< ${arg:0:1})${arg:1}"
+
+echo "######################################################"
+echo "#                   $capitalized"
+echo "######################################################"
+
+if brew list $1 &>/dev/null
+then
+  echo "$capitalized is already installed, updating $capitalized to latest version"
+  brew upgrade $1
+else
+  echo "$capitalized is not installed, installing $capitalized now"
+  brew install --cask $1
+fi
+
+echo "######################################################"
+echo "#               $capitalized Finished"
+echo "######################################################"
+
+echo ""
+echo ""
