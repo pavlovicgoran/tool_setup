@@ -6,7 +6,7 @@
 
 git_tools=("kaleidoscope" "tower")
 dev_tools=("visual-studio-code" "xcodes" "devutils" "proxyman" "postman" "iexplorer")
-productivity_tools=("raycast" "istat-menus" "iterm2" "bitwarden")
+productivity_tools=("raycast" "istat-menus" "iterm2" "bitwarden" "obsidian")
 
 install_tools() {
     # Make Helper Func Executable
